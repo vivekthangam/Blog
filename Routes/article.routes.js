@@ -5,16 +5,17 @@ const router = express.Router();
 
 router.post('/', async(req, res) => {
 
-    const Article = new Article({
+    console.log(req.body);
+    const _article = new Article({
         title: req.body.title,
         description: req.body.description,
         markdown: req.body.markdown
     });
     try {
         await Article.save();
-        res.redirect(`/articles/${Article.id}`);
+        res.redirect(`/articles/${_article.id}`);
     } catch (e) {
-        res.render("/articles/new", { articles: _article });
+        res.render("/articles/new", { article: _article });
     }
 
 });
@@ -29,7 +30,7 @@ router.get('/:id', (req, res) => {
 
 router.get('/new', (req, res) => {
 
-    res.render("newArticle");
+    res.render("newArticle", { article: new Article() });
 });
 
 module.exports = router;
