@@ -1,28 +1,25 @@
 {
-    "name": "Blog",
+    "name": "markdown-blog",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/vivekthangam/Blog.git"
+        "dev": "nodemon server.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/vivekthangam/Blog/issues"
-    },
-    "homepage": "https://github.com/vivekthangam/Blog#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "dompurify": "^2.0.8",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "jsdom": "^16.2.1",
+        "marked": "^0.8.0",
+        "method-override": "^3.0.0",
+        "mongoose": "^5.9.4",
+        "slugify": "^1.4.0"
     },
     "devDependencies": {
-        "ejs": "^3.1.6",
-        "mongoose": "^5.11.18"
+        "nodemon": "^2.0.2"
     }
 }
